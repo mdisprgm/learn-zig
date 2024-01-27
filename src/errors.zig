@@ -22,6 +22,7 @@ test "error union" {
     const no_error = maybe_error catch 0; // catch : 좌변이 에러 타입이면 우변의 값으로 evalutate
 
     // 우변에 값이 아닌 요런 것도 됨.
+    // zig에서는 noreturn 이라는 타입으로 새롭게 정의해서 부르는 듯
     maybe_error catch return;
     maybe_error catch doSomething();
     maybe_error catch if (doSomething() < 10) {
