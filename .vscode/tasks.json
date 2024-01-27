@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build Zig Project",
+            "label": "Zig: Build Zig Project",
             "type": "shell",
             "command": "zig",
             "args": [
@@ -10,6 +10,24 @@
             ],
             "group": {
                 "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": "$zig"
+        },
+        {
+            "label": "Zig: Test Zig Code",
+            "type": "shell",
+            "command": "zig",
+            "args": [
+                "test",
+                "${fileDirname}\\${fileBasename}"
+            ],
+            "group": {
+                "kind": "test",
                 "isDefault": true
             },
             "presentation": {

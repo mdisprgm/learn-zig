@@ -10,6 +10,18 @@
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal",
             "preLaunchTask": "Build Zig Project"
+        },
+        {
+            "name": "Test Zig Code",
+            "type": "lldb",
+            "request": "launch",
+            "program": "cmd",
+            "args": [
+                "/c"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "preLaunchTask": "Zig: Test Zig Code"
         }
     ]
 }
